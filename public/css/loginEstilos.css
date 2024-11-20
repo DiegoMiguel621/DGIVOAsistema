@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    background-color: #6F1D30;
+    background-color: #691B32;
     color: white;
     padding: 0px 20px;
     display: flex;
@@ -36,8 +36,8 @@ body {
 .login-container {
     text-align: center;
     margin: 50px auto;
-    max-width: 400px;
-    height: 410px;
+    max-width: 430px;
+    height: 415px;
 }
 
 #loginButton{
@@ -46,48 +46,49 @@ body {
 }
 
 .login-container h2 {
-    font-size: 28px; /* Texto más grande */
-    margin-bottom: 20px;
+    font-size: 40px; /* Texto más grande */
+    margin-bottom: 30px;
 }
 
 .login-form {
-    background-color: #F2F2F2;
+    background-color: #E9E9E9;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 150px;
-}
+    display: inline-block;
 
-input{
-    width: 80%;
 }
 
 .login-form input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+    margin: 10px -10px;
+    border: 1px solid white;
+    color: #7E7E7E;
     border-radius: 5px;
+    font-style: italic;
     font-size: 16px;
 }
 
 .login-form button {
-    background-color: #B08D57;
+    background-color: #BC955B;
     color: white;
     border: none;
     padding: 10px;
+    margin-right: 9px;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
 }
 
 .login-form button:hover {
-    background-color: #916A44;
+    background-color: #BC955B;
 }
 
 .footer {
-    background-color: #6F1D30;
+    background-color: #691B32;
     color: white;
     padding: 5px;
 }
