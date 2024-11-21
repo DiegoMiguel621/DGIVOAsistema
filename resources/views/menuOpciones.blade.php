@@ -1,4 +1,4 @@
 @extends('header')
 @section('contenido')
-<h1>Menu opciones</h1>
+<h1>Aqui va el contenido</h1>
 @endsection
