@@ -6,7 +6,7 @@
     <script src="https://kit.fontawesome.com/4f6d7f0454.js" crossorigin="anonymous"></script>
     <title>Document</title>
 
-    <link rel="stylesheet" type="text/css" href="css/menuOpcionesEstilos.css">
+    <link rel="stylesheet" type="text/css" href="css/headerEstilos.css">
 
 </head>
 <body>
@@ -20,7 +20,7 @@
         </div>
         <div class="derecha-header">
             <div class="cont-MensIcon">
-            <i class="fa-solid fa-message fa-2xl"></i>  
+            <i class="fa-solid fa-message fa-2xl"></i>
             </div>
             <div class="cont-notifIcon">
             <i class="fa-solid fa-bell fa-2xl" style="color: #ffffff;"></i>
@@ -42,6 +42,6 @@
     </section>
     <footer>
 <h1>foster</h1>
-    </footer>   
+    </footer>
 </body>
 </html>
