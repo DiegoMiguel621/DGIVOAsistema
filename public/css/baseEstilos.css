@@ -1,12 +1,13 @@
-/* Ensure the body spans the full viewport height */
+/* Estilo básico para el body */
 body {
     margin: 0;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     height: 100vh; /* Full viewport height */
+    width: 100%;
 }
 
-/* Header styles */
+/* Header ocupa el 12% de altura y el 100% de ancho */
 .header {
     background-color: #691B32;
     color: white;
@@ -41,65 +42,20 @@ body {
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-/* Main content takes the remaining height */
-.login-container {
-    flex-grow: 1;
-    text-align: center;
-    margin: auto;
-    max-width: 430px;
+/* Aside ocupa el 88% de altura restante y 15% del ancho */
+aside {
+    width: 15%; /* 15% del ancho del body */
+    background-color: black;
+    height: 76%;
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
-/* Styling for login form */
-#loginButton {
-    width: 25%;
-    float: right;
-}
-
-.login-container h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-}
-
-.login-form {
-    background-color: #E9E9E9;
-    padding: 40px; /* Incrementa el padding para mayor altura */
-    padding-bottom: 50px; /* Agrega espacio adicional en la parte inferior */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: 170px;
-}
-
-.login-form input {
-    width: 90%;
-    padding: 12px; /* Incrementa el padding vertical */
-    margin: 15px 0; /* Aumenta el margen para más espacio entre campos */
-    border: 1px solid white;
-    color: #7E7E7E;
-    border-radius: 5px;
-    font-style: italic;
-    font-size: 16px;
-}
-
-.login-form button {
-    background-color: #BC955B;
-    color: white;
-    border: none;
-    padding: 12px; /* Aumenta el tamaño del botón */
-    width: 100%;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px; /* Añade separación entre el botón y los campos superiores */
-}
-
-.login-form button:hover {
-    background-color: #A67D4E;
-}
-
-
-/* Footer content alignment */
+/* Footer ocupa el 12% de altura y el 100% de ancho */
 .footer {
     flex-shrink: 0;
+    width: 100%;
     height: 12%; /* Approx. 12% of viewport height */
     display: flex;
     align-items: center;
@@ -132,4 +88,18 @@ body {
 .footer-line {
     margin: 0;
     font-size: 14px;
+}
+
+
+/* Main ocupa el espacio restante (85% del ancho y 76% del alto) */
+main {
+    background-color: green;
+    width: 85%; /* 85% del ancho del body */
+    height: 76%; /* 88% del alto del body */
+    float: right; /* Posiciona el main a la derecha del aside */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }

@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DGIVOA</title>
-
     <link rel="stylesheet" type="text/css" href="css/loginEstilos.css">
-
 </head>
 <body>
-
-<header class="header">
+    <header class="header">
         <div class="logo-container">
             <img src="images/logo_sin.png" alt="Logo" class="logo">
             <div class="header-text">
@@ -39,6 +36,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

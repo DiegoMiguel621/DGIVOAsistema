@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4f6d7f0454.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>@yield('title', 'Página Base')</title>
 
-    <link rel="stylesheet" type="text/css" href="css/headerEstilos.css">
+    <link rel="stylesheet" type="text/css" href="css/baseEstilos.css">
+    @stack('styles')
 
 </head>
 <body>
@@ -36,12 +37,18 @@
     <aside>
 <h1>aside</h1>
     </aside>
-    @yield ('contenido')
-    <section>
-
-    </section>
-    <footer>
-<h1>foster</h1>
+    <main>
+    @yield ('contenido')    
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="images/logo_hidalgo.png" alt="Logo Hidalgo" class="footer-logo">
+            <div class="footer-text">
+                <p class="footer-title">Contraloría</p>
+                <p class="footer-line">42162 San Agustín</p>
+                <p class="footer-line">Tlaxiaca, Hgo.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
