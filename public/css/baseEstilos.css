@@ -15,32 +15,99 @@ body {
     display: flex;
     align-items: center; /* Centra el contenido verticalmente */
     justify-content: space-between; /* Distribuye el contenido horizontalmente */
-    padding: 0 20px; /* Añade margen interno para separar el contenido del borde */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del header */
+    padding: 0 20px; /* Margen interno para separar contenido del borde */
+    box-sizing: border-box; /* Padding incluido en el tamaño total */
 }
 
 .header .logo-container {
     display: flex;
-    align-items: center; /* Centra verticalmente el logo y el texto */
+    align-items: center; /* Centra el logo y texto verticalmente */
 }
 
 .header .logo {
-    max-height: 100%; /* Ajusta la altura del logo al tamaño del contenedor */
-    max-width: 80px; /* Limita el ancho del logo para mantener proporciones */
-    object-fit: contain; /* Ajusta el logo sin distorsionar */
+    max-width: 80px; /* Define un tamaño máximo para el logo */
+    object-fit: contain; /* Asegura que no se distorsione el logo */
     margin-right: 15px; /* Espaciado entre el logo y el texto */
 }
 
-.header-text {
-    line-height: 1.2; /* Ajusta la separación entre las líneas del texto */
-    font-size: clamp(18px, 2vw, 22px); /* Escala responsivamente el tamaño del texto */
+.header .header-text {
+    line-height: 1.2; /* Ajusta la separación entre líneas */
+    font-size: clamp(18px, 2vw, 22px); /* Escala responsivamente el tamaño */
 }
 
-.header-line {
-    margin: 0; /* Elimina márgenes para un mejor control del espaciado */
-    font-family: 'Afacad', sans-serif; /* Define la fuente principal y una alternativa */
-    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+.header .header-line {
+    margin: 0; /* Elimina márgenes en el texto */
+    font-family: 'Afacad', sans-serif; /* Fuente principal */
+    white-space: nowrap; /* Evita que el texto se divida */
 }
+
+.derecha-header {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 20px; /* Espaciado general entre elementos en el contenedor */
+}
+
+.derecha-header .cont-MensIcon,
+.derecha-header  {
+    position: relative; /* Permite posicionar la insignia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Íconos en blanco */
+    font-size: 0.7rem; /* Tamaño más pequeño para los íconos */
+    cursor: pointer;
+    margin-right: 5px; /* Espacio adicional entre íconos y el texto del usuario */
+}
+.cont-notifIcon{
+    position: relative; /* Permite posicionar la insignia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Íconos en blanco */
+    font-size: 0.8rem; /* Tamaño más pequeño para los íconos */
+    cursor: pointer;
+    margin-right: 5px; /* Espacio adicional entre íconos y el texto del usuario */
+
+}
+
+.derecha-header .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff0000; /* Color rojo para insignias */
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+.derecha-header h3 {
+    margin: 0;
+    margin-left: 10px; /* Espaciado adicional entre los íconos y el texto del usuario */
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: sans-serif;
+    white-space: nowrap; /* Evita que el texto se divida */
+}
+
+.derecha-header .cont-fotoPerfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px; /* Espacio adicional entre el texto y la foto de perfil */
+}
+
+.derecha-header .fotoPerfil {
+    width: 80px; /* Tamaño más grande para la imagen de perfil */
+    height: 80px; /* Ajusta altura proporcional */
+    border-radius: 50%; /* Hace la imagen circular */
+    
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+
+
 
 /* Aside ocupa el 88% de altura restante y 15% del ancho */
 aside {

@@ -19,11 +19,20 @@
 
     <main class="login-container">
         <h2>Iniciar sesión</h2>
-        <form class="login-form">
-            <input type="email" placeholder="correo electrónico" required>
-            <input type="password" placeholder="contraseña" required>
-            <button id="loginButton" type="submit">Entrar</button>
-        </form>
+        <form class="login-form" method="POST" action="{{ route('login') }}">
+    @csrf
+    <input type="email" name="email" placeholder="correo electrónico" required>
+    <input type="password" name="password" placeholder="contraseña" required>
+    <button id="loginButton" type="submit">Entrar</button>
+</form>
+
+<!-- Mostrar errores si los hay -->
+@if($errors->has('loginError'))
+    <div class="error-message">
+        {{ $errors->first('loginError') }}
+    </div>
+@endif
+
     </main>
 
     <footer class="footer">

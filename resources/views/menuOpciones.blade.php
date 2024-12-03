@@ -6,5 +6,6 @@
 @section('contenido')
 
 <h1>content</h1>
+<?php $user = session('user'); ?>
 
 @endsection
