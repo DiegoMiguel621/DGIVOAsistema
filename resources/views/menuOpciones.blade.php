@@ -4,8 +4,10 @@
 @extends('base')
 @section('title', 'Menu principal') <!-- Define el título específico de la página -->
 @section('contenido')
-
-<h1>content</h1>
 <?php $user = session('user'); ?>
+<section>
+    <h1>contenido Menu</h1>
+    
 
+</section>
 @endsection

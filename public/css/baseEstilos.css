@@ -109,15 +109,75 @@ body {
 
 
 
-/* Aside ocupa el 88% de altura restante y 15% del ancho */
+/* Aside ocupa el 76% de altura restante y 15% del ancho */
 aside {
     width: 15%; /* 15% del ancho del body */
-    background-color: black;
+    background-color: #5C5C5C;
     height: 76%;
     float: left;
     display: inline-block;
     box-sizing: border-box;
 }
+#opcMenu {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos (Menú y el ícono) */
+    align-items: center; /* Centra verticalmente el texto y el ícono */
+    padding: 10px 15px; /* Margen interno para darle espacio al contenido */
+    background-color: #4B4A4A; /* Fondo gris oscuro */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra ligera para darle dimensión */
+}
+
+#opcMenu Font {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    font-family: Arial, sans-serif; /* Define la fuente del texto */
+    color: white; /* Asegura que el texto sea blanco */
+}
+
+#opcMenu .cont-iconMen {
+    display: flex;
+    align-items: center; /* Centra el ícono verticalmente */
+    justify-content: center; /* Centra el ícono horizontalmente */
+    font-size: 0.7rem; /* Ajusta el tamaño del ícono */
+    color: white; /* Asegura que el ícono sea blanco */
+    margin-left: 10px; /* Espaciado entre el texto y el ícono */
+}
+
+/* Botón completo como recuadro */
+.home-button {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 15px; /* Espacio entre el ícono y el texto */
+    background-color: #5C5C5C; /* Color base del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    padding: 15px 15px; /* Margen interno para dar espacio */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efectos de transición */
+    cursor: pointer; /* Muestra el cursor de mano en hover */
+    width: 100%; /* Asegura que el botón ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye padding en el tamaño total */
+}
+
+.home-button:hover {
+    background-color: #4B4A4A; /* Cambia el fondo al pasar el cursor */
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño en hover */
+}
+
+.cont-iconHome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem; /* Tamaño del ícono */
+}
+
+.opcText {
+    margin: 0; /* Elimina márgenes del texto */
+    font-size: 1rem; /* Tamaño del texto */
+    font-family: Arial, sans-serif; /* Fuente estándar */
+    color: white; /* Asegura que el texto sea blanco */
+}
+
+
 
 /* Footer ocupa el 12% de altura y el 100% de ancho */
 .footer {
@@ -160,7 +220,7 @@ aside {
 
 /* Main ocupa el espacio restante (85% del ancho y 76% del alto) */
 main {
-    background-color: green;
+    background-color: #E9E9E9;
     width: 85%; /* 85% del ancho del body */
     height: 76%; /* 88% del alto del body */
     float: right; /* Posiciona el main a la derecha del aside */

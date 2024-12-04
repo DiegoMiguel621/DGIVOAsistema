@@ -31,14 +31,56 @@
         <div class="cont-datosHeader">
             <h1>{{ $user->primerNombre }} {{ $user->apPaterno }} - {{ $user->direccion }}</h1>
         </div>
+        <a href="{{ route('perfil') }}">
         <div class="cont-fotoPerfil">
             <img src="images/perfil_sin.png" alt="Perfil" class="fotoPerfil">
         </div>
+        </a>
     </div>
 </header>
 
-    <aside>
-<h1>aside</h1>
+    <aside>        
+        <div id="opcMenu">
+            <Font>Menú</Font>
+            <div class="cont-iconMen">
+                <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+        
+        <a href="{{ route('menuOpciones') }}" class="home-button">
+            <div class="cont-iconHome">
+                <i class="fa-solid fa-house fa-2xl" style="color: #5ADB6D;"></i>
+            </div>
+            <p class="opcText">Inicio</p>
+        </a>
+
+        <a href="{{ route('perfil') }}" class="home-button">
+            <div class="cont-iconHome">
+            <i class="fa-solid fa-user fa-2xl" style="color: #000000;"></i>
+            </div>
+            <p class="opcText">Perfil</p>
+        </a>
+
+<a href="#" id="logoutButton" class="home-button">
+    <div class="cont-iconHome">
+        <i class="fa-solid fa-right-from-bracket fa-2xl" style="color: #f50a0a;"></i>
+    </div>
+    <p class="opcText">Cerrar Sesión</p>
+</a>
+
+<script>
+    document.getElementById('logoutButton').addEventListener('click', function(event) {
+        event.preventDefault();
+        if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+            window.location.href = "{{ route('logout') }}";
+        }
+    });
+</script>
+
+
+
+
+
     </aside>
     <main>
     @yield ('contenido')    
