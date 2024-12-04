@@ -9,7 +9,7 @@
 <div class="profile-container">
     <!-- Imagen del perfil -->
     <div class="profile-image">
-        <img src="images/perfil_sin.png" alt="Imagen de Perfil" class="image">
+        <img src="images/perfil.png" alt="Imagen de Perfil" class="image">
         <a>
             <i class="fa-solid fa-pen-to-square fa-2xl" style="color: #000000;"></i>
         </a>

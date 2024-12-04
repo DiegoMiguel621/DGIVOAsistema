@@ -33,7 +33,7 @@
         </div>
         <a href="{{ route('perfil') }}">
         <div class="cont-fotoPerfil">
-            <img src="images/perfil_sin.png" alt="Perfil" class="fotoPerfil">
+            <img src="images/perfil.png" alt="Perfil" class="fotoPerfil">
         </div>
         </a>
     </div>
