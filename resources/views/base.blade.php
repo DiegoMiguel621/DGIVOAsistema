@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4f6d7f0454.js" crossorigin="anonymous"></script>
-    <title>@yield('title', 'Página Base')</title>
+    <title>@yield('title', 'Página Base')</title> <!--Define el titulo de la pagina. se cambia en cada "contenido -->
 
     <link rel="stylesheet" type="text/css" href="css/baseEstilos.css">
     @stack('styles')
@@ -22,11 +22,11 @@
     <div class="derecha-header">
         <div class="cont-MensIcon">
             <i class="fa-solid fa-message fa-2xl"></i>
-            <span class="badge">2</span>
+            <span class="badge">0</span>
         </div>
         <div class="cont-notifIcon">
             <i class="fa-solid fa-bell fa-2xl"></i>
-            <span class="badge">3</span>
+            <span class="badge">0</span>
         </div>
         <div class="cont-datosHeader">
             <h1>{{ $user->primerNombre }} {{ $user->apPaterno }} - {{ $user->direccion }}</h1>
@@ -76,15 +76,12 @@
         }
     });
 </script>
-
-
-
-
-
     </aside>
+
     <main>
     @yield ('contenido')    
     </main>
+
     <footer class="footer">
         <div class="footer-content">
             <img src="images/logo_hidalgo.png" alt="Logo Hidalgo" class="footer-logo">
@@ -95,5 +92,6 @@
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

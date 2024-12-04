@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 
+
 Route::get('/', function () {
     return view('login');
 });
@@ -28,3 +29,5 @@ Route::get('/logout', function () {
 Route::get('/perfil', function () {
     return view('perfil');
 })->name('perfil');
+
+
