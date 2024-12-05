@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EmpleadoController;
 
 
 Route::get('/', function () {
@@ -30,4 +31,5 @@ Route::get('/perfil', function () {
     return view('perfil');
 })->name('perfil');
 
+Route::get('/empleados', [EmpleadoController::class, 'index'])->name('empleados');
 

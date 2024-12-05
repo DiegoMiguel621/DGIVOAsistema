@@ -1,0 +1,58 @@
+/* Contenedor principal */
+.empleados-container {
+    margin: 20px;
+    text-align: center; /* Centra el título */
+}
+
+/* Título */
+.empleados-container h1 {
+    font-size: 2rem;
+    color: black; /* Cambia el color del título a negro */
+    margin-bottom: 20px;
+}
+
+/* Tabla */
+.empleados-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Centra la tabla horizontalmente */
+}
+
+/* Estilo de encabezado */
+.empleados-table thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo de filas */
+.empleados-table tbody tr {
+    background-color: white;
+}
+
+.empleados-table tbody tr:nth-child(even) {
+    background-color: #E9E9E9;
+}
+
+/* Celdas */
+.empleados-table td {
+    padding: 10px;
+    vertical-align: middle; /* Asegura que el contenido esté centrado verticalmente */
+    text-align: center; /* Centra el contenido horizontalmente */
+}
+
+/* Opciones */
+.opciones {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Centra los íconos verticalmente */
+    gap: 10px; /* Espacio entre íconos */
+}
+
+/* Iconos de Opciones */
+.cont-iconOpcEmp i {
+    font-size: 1.2rem; /* Reduce ligeramente el tamaño del ícono */
+}
