@@ -22,9 +22,7 @@ class AuthController extends Controller
         // Verificar si el usuario existe y la contraseña es correcta
         if ($user && $request->password === $user->contraseña) {
             // Iniciar sesión (almacenar usuario en la sesión)
-            session(['user' => $user]);
-
-            // Redirigir al menú de opciones
+            session(['user' => $user]);            
             return redirect()->route('menuOpciones');
         }
 

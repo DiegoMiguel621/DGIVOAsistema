@@ -7,7 +7,13 @@
 <?php $user = session('user'); ?>
 
 <div class="empleados-container">
-    <h1>Empleados de DGIVOA</h1>
+    <!-- Contenedor del título y botón -->
+    <div class="header-container">
+        <h1>Empleados de DGIVOA</h1>
+        <a href="{{ route('addEmpleados') }}" class="add-employee-button">Alta de nuevo empleado</a>
+    </div>
+
+    <!-- Tabla de empleados -->
     <table class="empleados-table">
         <thead>
             <tr style="background-color: #9A566A; color: white;">
@@ -34,7 +40,7 @@
                         <i class="fa-solid fa-pen-to-square fa-lg" style="color: #000000;"></i>
                     </div>
                     <div class="cont-iconOpcEmp">
-                        <i class="fa-solid fa-key" style="color: #000000;"></i> 
+                        <i class="fa-solid fa-key" style="color: #000000;"></i>
                     </div>
                     <div class="cont-iconOpcEmp">
                         <i class="fa-solid fa-trash" style="color: #000000;"></i>
@@ -45,4 +51,5 @@
         </tbody>
     </table>
 </div>
+
 @endsection

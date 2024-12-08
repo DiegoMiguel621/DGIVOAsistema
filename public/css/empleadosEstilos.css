@@ -1,15 +1,51 @@
+
 /* Contenedor principal */
 .empleados-container {
-    margin: 20px;
-    text-align: center; /* Centra el título */
+    margin: 20px; /* Espaciado general */
+    text-align: center;
+    padding-top: 20px; /* Separación mínima de 20px desde la parte superior */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+
+/* Contenedor del título y botón */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinea el título a la izquierda y el botón a la derecha */
+    margin-bottom: 20px;
 }
 
 /* Título */
 .empleados-container h1 {
     font-size: 2rem;
-    color: black; /* Cambia el color del título a negro */
-    margin-bottom: 20px;
+    color: black;
+    margin: 0;
 }
+
+/* Botón "Alta de nuevo empleado" */
+/* Botón "Alta de nuevo empleado" */
+.add-employee-button {
+    background-color: #BC955B; /* Color base del botón */
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 15px; /* Tamaño ajustado del botón */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid black; /* Borde negro */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 150px; /* Ancho fijo para forzar el texto en dos líneas */
+    word-wrap: break-word; /* Permite que el texto se ajuste */
+    line-height: 1.2; /* Reduce ligeramente el espacio entre líneas */
+}
+
+.add-employee-button:hover {
+    background-color: #a67945; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Agranda ligeramente el botón en hover */
+}
+
 
 /* Tabla */
 .empleados-table {
@@ -19,7 +55,7 @@
     font-size: 1rem;
     text-align: left;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Centra la tabla horizontalmente */
+    margin: 0 auto;
 }
 
 /* Estilo de encabezado */
@@ -40,7 +76,7 @@
 /* Celdas */
 .empleados-table td {
     padding: 10px;
-    vertical-align: middle; /* Asegura que el contenido esté centrado verticalmente */
+    vertical-align: middle; /* Centra verticalmente el contenido */
     text-align: center; /* Centra el contenido horizontalmente */
 }
 

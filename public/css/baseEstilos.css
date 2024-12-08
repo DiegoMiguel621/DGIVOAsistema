@@ -112,7 +112,7 @@ body {
 aside {
     width: 15%; /* 15% del ancho del body */
     background-color: #5C5C5C;
-    height: 76%;
+    min-height: 76%;
     float: left;
     display: inline-block;
     box-sizing: border-box;
@@ -221,11 +221,12 @@ aside {
 main {
     background-color: #E9E9E9;
     width: 85%; /* 85% del ancho del body */
-    height: 76%; /* 88% del alto del body */
+    min-height: 76%;
+    height: auto; 
     float: right; /* Posiciona el main a la derecha del aside */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     box-sizing: border-box;
 }

@@ -31,5 +31,13 @@ Route::get('/perfil', function () {
     return view('perfil');
 })->name('perfil');
 
+// Mostrar la lista de empleados
 Route::get('/empleados', [EmpleadoController::class, 'index'])->name('empleados');
+
+// Mostrar la vista de agregar empleado
+Route::get('/add-empleados', [EmpleadoController::class, 'create'])->name('addEmpleados');
+
+// Guardar un nuevo empleado en la base de datos
+Route::post('/empleados', [EmpleadoController::class, 'store'])->name('empleados.store');
+
 
