@@ -46,3 +46,7 @@ Route::get('/empleados/{id}/edit', [EmpleadoController::class, 'edit'])->name('e
 
 // Actualizar empleado
 Route::put('/empleados/{id}', [EmpleadoController::class, 'update'])->name('empleados.update');
+
+Route::get('/visitas', function () {
+    return view('visitas');
+});
