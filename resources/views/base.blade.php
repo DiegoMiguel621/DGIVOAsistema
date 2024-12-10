@@ -6,14 +6,14 @@
     <script src="https://kit.fontawesome.com/4f6d7f0454.js" crossorigin="anonymous"></script>
     <title>@yield('title', 'Página Base')</title> <!--Define el titulo de la pagina. se cambia en cada "contenido -->
 
-    <link rel="stylesheet" type="text/css" href="css/baseEstilos.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/baseEstilos.css') }}">
     @stack('styles')
 
 </head>
 <body>
 <header class="header">
     <div class="logo-container">
-        <img src="images/logo_sin.png" alt="Logo" class="logo">
+        <img src="{{ asset('images/logo_sin.png') }}" alt="Logo" class="logo">
         <div class="header-text">
             <p class="header-line">Dirección General de Inspección y</p>
             <p class="header-line">Vigilancia de Obras y Acciones</p>
@@ -84,7 +84,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <img src="images/logo_hidalgo.png" alt="Logo Hidalgo" class="footer-logo">
+        <img src="{{ asset('images/logo_hidalgo.png') }}" alt="Logo Hidalgo" class="footer-logo">
             <div class="footer-text">
                 <p class="footer-title">Contraloría</p>
                 <p class="footer-line">42162 San Agustín</p>

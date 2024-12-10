@@ -41,3 +41,8 @@ Route::get('/add-empleados', [EmpleadoController::class, 'create'])->name('addEm
 Route::post('/empleados', [EmpleadoController::class, 'store'])->name('empleados.store');
 
 
+// Mostrar formulario de edición
+Route::get('/empleados/{id}/edit', [EmpleadoController::class, 'edit'])->name('empleados.edit');
+
+// Actualizar empleado
+Route::put('/empleados/{id}', [EmpleadoController::class, 'update'])->name('empleados.update');

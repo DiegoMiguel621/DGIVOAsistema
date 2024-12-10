@@ -52,4 +52,55 @@ class EmpleadoController extends Controller
         // Redirigir a la lista de empleados con un mensaje de éxito
         return redirect()->route('empleados')->with('success', 'Empleado agregado correctamente.');
     }
+
+    // Mostrar el formulario de edición con los datos cargados
+    public function edit($id)
+    {
+        // Obtener los datos del empleado por su ID
+        $empleado = DB::table('usuario')->where('idUser', $id)->first();
+
+        // Verificar si el empleado existe
+        if (!$empleado) {
+            return redirect()->route('empleados')->with('error', 'Empleado no encontrado.');
+        }
+
+        // Retornar la vista con los datos del empleado
+        return view('editEmpleados', compact('empleado'));
+    }
+
+    // Actualizar los datos del empleado en la base de datos
+    public function update(Request $request, $id)
+    {
+        // Validar los datos enviados desde el formulario
+        $request->validate([
+            'primerNombre' => 'required|string|max:30',
+            'segundoNombre' => 'nullable|string|max:30',
+            'apPaterno' => 'required|string|max:30',
+            'apMaterno' => 'nullable|string|max:30',
+            'correo' => 'required|email|unique:usuario,correo,' . $id . ',idUser',
+            'contraseña' => 'nullable|string|min:6',
+            'direccion' => 'required|string|in:DICO,DEROA,General',
+        ]);
+
+        // Preparar los datos a actualizar
+        $updateData = [
+            'primerNombre' => $request->primerNombre,
+            'segundoNombre' => $request->segundoNombre,
+            'apPaterno' => $request->apPaterno,
+            'apMaterno' => $request->apMaterno,
+            'correo' => $request->correo,
+            'direccion' => $request->direccion,
+        ];
+
+        // Si se proporciona una nueva contraseña, encriptarla
+        if ($request->filled('contraseña')) {
+            $updateData['contraseña'] = bcrypt($request->contraseña);
+        }
+
+        // Actualizar los datos del empleado
+        DB::table('usuario')->where('idUser', $id)->update($updateData);
+
+        // Redirigir a la lista de empleados con un mensaje de éxito
+        return redirect()->route('empleados')->with('success', 'Empleado actualizado correctamente.');
+    }
 }

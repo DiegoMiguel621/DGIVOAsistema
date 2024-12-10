@@ -221,8 +221,8 @@ aside {
 main {
     background-color: #E9E9E9;
     width: 85%; /* 85% del ancho del body */
-    min-height: 76%;
-    height: auto; 
+    height: 76%;
+    
     float: right; /* Posiciona el main a la derecha del aside */
     display: flex;
     flex-direction: column;

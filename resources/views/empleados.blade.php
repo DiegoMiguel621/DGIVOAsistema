@@ -1,5 +1,5 @@
 @push('styles')
-<link rel="stylesheet" type="text/css" href="css/empleadosEstilos.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/EmpleadosEstilos.css') }}">
 @endpush
 @extends('base')
 @section('title', 'Gestión de Empleados') <!-- Define el título específico de la página -->
@@ -37,7 +37,9 @@
                 <td>{{ $usuario->direccion }}</td>
                 <td class="opciones">
                     <div class="cont-iconOpcEmp">
-                        <i class="fa-solid fa-pen-to-square fa-lg" style="color: #000000;"></i>
+                        <a href="{{ route('empleados.edit', $usuario->idUser) }}">
+                            <i class="fa-solid fa-pen-to-square fa-lg" style="color: #000000;"></i>
+                        </a>
                     </div>
                     <div class="cont-iconOpcEmp">
                         <i class="fa-solid fa-key" style="color: #000000;"></i>

@@ -1,5 +1,5 @@
 @push('styles')
-<link rel="stylesheet" type="text/css" href="css/perfilEstilos.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/perfilEstilos.css') }}">
 @endpush
 @extends('base')
 @section('title', 'Perfil') <!-- Define el título específico de la página -->
