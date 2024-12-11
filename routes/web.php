@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EmpleadoController;
-
+use App\Http\Controllers\VisitasController;
 
 Route::get('/', function () {
     return view('login');
@@ -47,6 +47,6 @@ Route::get('/empleados/{id}/edit', [EmpleadoController::class, 'edit'])->name('e
 // Actualizar empleado
 Route::put('/empleados/{id}', [EmpleadoController::class, 'update'])->name('empleados.update');
 
-Route::get('/visitas', function () {
-    return view('visitas');
-});
+Route::get('/visitas', [VisitasController::class, 'index']);
+
+
