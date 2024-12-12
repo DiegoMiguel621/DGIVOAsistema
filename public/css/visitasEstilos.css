@@ -14,7 +14,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+#txtTitulo {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
@@ -28,7 +28,7 @@ table {
 }
 
 thead {
-    background-color: #c3002f;
+    background-color:#ddd;
     color: #fff;
 }
 
@@ -38,7 +38,7 @@ th, td {
 }
 
 th {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -65,7 +65,7 @@ button {
 }
 
 .delete-btn {
-    background-color: #dc3545;
+
     color: #fff;
 }
 

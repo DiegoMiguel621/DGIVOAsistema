@@ -7,7 +7,7 @@
 <?php $user = session('user'); ?>
 <section>
     <div class="container">
-        <h1>Visitas del día</h1>
+        <h1 id="txtTitulo">Visitas del día</h1>
         <table>
             <thead>
                 <tr>
@@ -36,8 +36,12 @@
                         <td>{{ $visita->horaSalida ?? 'Pendiente' }}</td>
                         <td>{{ $visita->nomAtendio }}</td>
                         <td>
-                            <button class="edit-btn">✏️</button>
-                            <button class="delete-btn">🗑️</button>
+                            <button >
+                                <i class="fa-solid fa-pen" style="color: #000000;"></i>
+                            </button>
+                            <button class="delete-btn">
+                                <i class="fa-solid fa-trash-can" style="color: #ff3333;"></i>
+                            </button>
                         </td>
                     </tr>
                 @empty
