@@ -96,6 +96,7 @@ button:hover {
     border-color: #007bff;
     outline: none;
     box-shadow:darkgrey;
+
 }
 
 /* Botón de agregar visita */
@@ -111,11 +112,19 @@ button:hover {
     transition: background-color 0.3s ease;
     margin-right: 25%;
     padding: 15px;
-    width: 15%;
+    width: 100%;
     letter-spacing: 1px;
 
 }
 
 .btn-agregar:hover {
     background-color: #a97a4d; /* Un tono más oscuro al pasar el cursor */
+}
+
+.btn-historial{
+    width: 100%;
+    background-color: #5C5C5C;
+    padding: 15px;
+    color: white;
+    margin-right: 20px;
 }

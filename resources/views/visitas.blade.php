@@ -10,7 +10,7 @@
         <h1 id="txtTitulo">Visitas del día</h1>
 
 
-        <!-- Menú desplegable y botón de agregar visita -->
+        <!-- Menú desplegable, botón de agregar visita y botón de historial -->
         <div class="menu-y-boton">
             <div class="menu-desplegable">
                 <select id="tipo-visita" class="select-visita">
@@ -18,7 +18,15 @@
                     <option value="mpio_contrat_depend">Visitas MPIO, CONTRAT, DEPEND</option>
                 </select>
             </div>
-            <button id="btn-agregar-visita" class="btn-agregar">+ Registrar Visita</button>
+            <div class="botones-derecha">
+                <button id="btn-agregar-visita" class="btn-agregar">+ Registrar Visita</button>
+            </div>
+            <div>
+                <button id="btn-historial" class="btn-historial">↺ Archivo</button>
+            </div>
+
+
+
         </div>
 
 
