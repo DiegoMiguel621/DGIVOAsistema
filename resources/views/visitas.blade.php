@@ -8,6 +8,20 @@
 <section>
     <div class="container">
         <h1 id="txtTitulo">Visitas del día</h1>
+
+
+        <!-- Menú desplegable y botón de agregar visita -->
+        <div class="menu-y-boton">
+            <div class="menu-desplegable">
+                <select id="tipo-visita" class="select-visita">
+                    <option value="generales">Visitas Generales</option>
+                    <option value="mpio_contrat_depend">Visitas MPIO, CONTRAT, DEPEND</option>
+                </select>
+            </div>
+            <button id="btn-agregar-visita" class="btn-agregar">+ Registrar Visita</button>
+        </div>
+
+
         <table>
             <thead>
                 <tr>

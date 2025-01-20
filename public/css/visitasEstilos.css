@@ -72,3 +72,50 @@ button {
 button:hover {
     opacity: 0.8;
 }
+
+/* Contenedor del menú desplegable y botón */
+.menu-y-boton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.select-visita {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.select-visita:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow:darkgrey;
+}
+
+/* Botón de agregar visita */
+.btn-agregar {
+    background-color: #BC955B; /* Color del diseño enviado */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-right: 25%;
+    padding: 15px;
+    width: 15%;
+    letter-spacing: 1px;
+
+}
+
+.btn-agregar:hover {
+    background-color: #a97a4d; /* Un tono más oscuro al pasar el cursor */
+}
