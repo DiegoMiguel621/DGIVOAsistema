@@ -11,19 +11,18 @@
 
 
         <!-- Menú desplegable, botón de agregar visita y botón de historial -->
-        <div class="menu-y-boton">
-            <div class="menu-desplegable">
-                <select id="tipo-visita" class="select-visita">
-                    <option value="generales">Visitas Generales</option>
-                    <option value="mpio_contrat_depend">Visitas MPIO, CONTRAT, DEPEND</option>
-                </select>
+            <div class="menu-y-boton">
+            <div id="menu-desplegable">
+            <select id="tipo-visita" class="select-visita">
+            <option value="generales">Visitas Generales</option>
+            <option value="mpio_contrat_depend">Visitas MPIO, CONTRAT, DEPEND</option>
+            </select>
             </div>
             <div class="botones-derecha">
-                <button id="btn-agregar-visita" class="btn-agregar">+ Registrar Visita</button>
-            </div>
-            <div>
-                <button id="btn-historial" class="btn-historial">↺ Archivo</button>
-            </div>
+        <button id="btn-agregar-visita" class="btn-agregar">+ Registrar Visita</button>
+        <button id="btn-historial" class="btn-historial">↺ Archivo</button>
+    </div>
+</div>
 
 
 
@@ -75,4 +74,48 @@
         </table>
     </div>
 </section>
+
+
+<!-- Modal para Registrar Visita -->
+<div id="modal-agregar-visita" class="modal hidden">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="txtRegistrarVisita">Registrar visita</h2>
+            <div><button id="btn-cerrar-modal" class="close-btn">&times;</button></div>
+
+        </div>
+        <div class="modal-body">
+            <form id="form-agregar-visita">
+                <label for="dependencia" id="txtDependencia">Dependencia:</label>
+                <select id="dependencia" name="dependencia">
+                    <option value="PF">PF</option>
+                    <option value="PM">PM</option>
+                    <option value="Municipio">Municipio</option>
+                </select>
+
+                <label for="municipio" class="hidden" id="txtMunicipio">Seleccione:</label>
+                <input type="text" id="municipio" name="municipio" class="hidden" placeholder="Ingrese el municipio">
+
+                <label for="nombreVisita" id="txtNomVisita">Nombre (Persona física/moral):</label>
+                <input type="text" id="nombreVisita" name="nombreVisita" required>
+
+                <label for="asunto" id="txtAsunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+
+                <label for="observaciones" id="txtObservaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones"></textarea>
+
+                <label for="telefono" id="txtTelefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+
+                <button type="submit" class="btn-guardar">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="{{ asset('js/modal-addVisitas.js') }}"></script>
+
+
+
+
 @endsection

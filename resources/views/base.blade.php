@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4f6d7f0454.js" crossorigin="anonymous"></script>
+
+
+
     <title>@yield('title', 'Página Base')</title> <!--Define el titulo de la pagina. se cambia en cada "contenido -->
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/baseEstilos.css') }}">
@@ -39,14 +42,14 @@
     </div>
 </header>
 
-    <aside>        
+    <aside>
         <div id="opcMenu">
             <Font>Menú</Font>
             <div class="cont-iconMen">
                 <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
             </div>
         </div>
-        
+
         <a href="{{ route('menuOpciones') }}" class="home-button">
             <div class="cont-iconHome">
                 <i class="fa-solid fa-house fa-2xl" style="color: #5ADB6D;"></i>
@@ -79,7 +82,7 @@
     </aside>
 
     <main>
-    @yield ('contenido')    
+    @yield ('contenido')
     </main>
 
     <footer class="footer">
@@ -92,6 +95,6 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
